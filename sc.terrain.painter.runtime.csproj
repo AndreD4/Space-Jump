@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{b0a4654c-682c-f346-333f-0f4409cbb12c}</ProjectGuid>
+    <ProjectGuid>{76612a96-7458-5553-09c0-da5d80fe178b}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>sc.terrain.painter.runtime</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -36,11 +36,19 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Movement.cs" />
-     <None Include="Assets\ProceduralTerrainPainter\Shaders\Filters.hlsl" />
-     <None Include="Assets\ProceduralTerrainPainter\_Demo\Textures\_LICENSE.txt" />
-     <None Include="Assets\ProceduralTerrainPainter\Shaders\Noise.hlsl" />
-     <None Include="Assets\ProceduralTerrainPainter\Shaders\Modifier.shader" />
+     <Compile Include="Assets\ProceduralTerrainPainter\Runtime\TerrainPainter.cs" />
+     <Compile Include="Assets\ProceduralTerrainPainter\Runtime\LayerSettings.cs" />
+     <Compile Include="Assets\ProceduralTerrainPainter\Runtime\Modifiers\TextureMask.cs" />
+     <Compile Include="Assets\ProceduralTerrainPainter\Runtime\Modifiers\Height.cs" />
+     <Compile Include="Assets\ProceduralTerrainPainter\Runtime\Attributes.cs" />
+     <Compile Include="Assets\ProceduralTerrainPainter\Runtime\ModifierStack.cs" />
+     <Compile Include="Assets\ProceduralTerrainPainter\Runtime\TerrainChangeListener.cs" />
+     <Compile Include="Assets\ProceduralTerrainPainter\Runtime\Modifiers\Curvature.cs" />
+     <Compile Include="Assets\ProceduralTerrainPainter\Runtime\Utilities.cs" />
+     <Compile Include="Assets\ProceduralTerrainPainter\Runtime\Modifiers\Modifier.cs" />
+     <Compile Include="Assets\ProceduralTerrainPainter\Runtime\Modifiers\Noise.cs" />
+     <Compile Include="Assets\ProceduralTerrainPainter\Runtime\Modifiers\Slope.cs" />
+     <None Include="Assets\ProceduralTerrainPainter\Runtime\sc.terrain.painter.runtime.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -229,6 +237,15 @@
     </Reference>
     <Reference Include="UnityEditor">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Graphs">
+        <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WebGL.Extensions">
+        <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+        <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
         <HintPath>C:/Users/andre/OneDrive/Desktop/UnityGames/Space-Jump/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>
@@ -578,43 +595,14 @@
     <Reference Include="System.Xml.Serialization">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-        <HintPath>C:/Users/andre/OneDrive/Desktop/UnityGames/Space-Jump/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-        <HintPath>C:/Users/andre/OneDrive/Desktop/UnityGames/Space-Jump/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>C:/Users/andre/OneDrive/Desktop/UnityGames/Space-Jump/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    <Reference Include="UnityEditor.UI">
+        <HintPath>C:/Users/andre/OneDrive/Desktop/UnityGames/Space-Jump/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
         <HintPath>C:/Users/andre/OneDrive/Desktop/UnityGames/Space-Jump/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Timeline">
-        <HintPath>C:/Users/andre/OneDrive/Desktop/UnityGames/Space-Jump/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Rider.Editor">
-        <HintPath>C:/Users/andre/OneDrive/Desktop/UnityGames/Space-Jump/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualStudio.Editor">
-        <HintPath>C:/Users/andre/OneDrive/Desktop/UnityGames/Space-Jump/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-        <HintPath>C:/Users/andre/OneDrive/Desktop/UnityGames/Space-Jump/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-        <HintPath>C:/Users/andre/OneDrive/Desktop/UnityGames/Space-Jump/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="sc.terrain.painter.runtime.csproj">
-      <Project>{76612a96-7458-5553-09c0-da5d80fe178b}</Project>
-      <Name>sc.terrain.painter.runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="sc.terrain.painter.editor.csproj">
-      <Project>{f83bbb8f-c300-9883-f6fa-8d714e5a0d33}</Project>
-      <Name>sc.terrain.painter.editor</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
