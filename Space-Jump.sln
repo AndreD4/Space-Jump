@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sc.terrain.painter.runtime", "sc.terrain.painter.runtime.csproj", "{76612a96-7458-5553-09c0-da5d80fe178b}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{c8f34146-5f25-9a83-b462-f0af7afafb45}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sc.terrain.painter.editor", "sc.terrain.painter.editor.csproj", "{f83bbb8f-c300-9883-f6fa-8d714e5a0d33}"
 EndProject
 Global
@@ -16,6 +18,8 @@ Global
 		{b0a4654c-682c-f346-333f-0f4409cbb12c}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76612a96-7458-5553-09c0-da5d80fe178b}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{76612a96-7458-5553-09c0-da5d80fe178b}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{c8f34146-5f25-9a83-b462-f0af7afafb45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{c8f34146-5f25-9a83-b462-f0af7afafb45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{f83bbb8f-c300-9883-f6fa-8d714e5a0d33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{f83bbb8f-c300-9883-f6fa-8d714e5a0d33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection

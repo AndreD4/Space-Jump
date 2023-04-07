@@ -605,8 +605,18 @@
     <Reference Include="UnityEditor.UI">
         <HintPath>C:/Users/andre/OneDrive/Desktop/UnityGames/Space-Jump/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.TerrainTools">
+        <HintPath>C:/Users/andre/OneDrive/Desktop/UnityGames/Space-Jump/Library/ScriptAssemblies/Unity.TerrainTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TerrainTools.Editor">
+        <HintPath>C:/Users/andre/OneDrive/Desktop/UnityGames/Space-Jump/Library/ScriptAssemblies/Unity.TerrainTools.Editor.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{c8f34146-5f25-9a83-b462-f0af7afafb45}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
     <ProjectReference Include="sc.terrain.painter.runtime.csproj">
       <Project>{76612a96-7458-5553-09c0-da5d80fe178b}</Project>
       <Name>sc.terrain.painter.runtime</Name>
