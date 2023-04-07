@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sc.terrain.painter.editor", "sc.terrain.painter.editor.csproj", "{f83bbb8f-c300-9883-f6fa-8d714e5a0d33}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{548df7b4-8fbb-fff9-cb84-53c851986272}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,6 +20,8 @@ Global
 		{b0a4654c-682c-f346-333f-0f4409cbb12c}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{f83bbb8f-c300-9883-f6fa-8d714e5a0d33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{f83bbb8f-c300-9883-f6fa-8d714e5a0d33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{548df7b4-8fbb-fff9-cb84-53c851986272}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{548df7b4-8fbb-fff9-cb84-53c851986272}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
