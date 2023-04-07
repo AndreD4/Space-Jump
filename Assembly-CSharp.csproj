@@ -36,11 +36,25 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Terrain\Standard Assets\Environment\Water\Water\Scripts\WaterBase.cs" />
      <Compile Include="Assets\Movement.cs" />
-     <None Include="Assets\ProceduralTerrainPainter\Shaders\Filters.hlsl" />
-     <None Include="Assets\ProceduralTerrainPainter\_Demo\Textures\_LICENSE.txt" />
-     <None Include="Assets\ProceduralTerrainPainter\Shaders\Noise.hlsl" />
-     <None Include="Assets\ProceduralTerrainPainter\Shaders\Modifier.shader" />
+     <Compile Include="Assets\Terrain\Standard Assets\Environment\Water\Water\Scripts\PlanarReflection.cs" />
+     <Compile Include="Assets\Terrain\Standard Assets\Environment\Water\Water\Scripts\Displace.cs" />
+     <Compile Include="Assets\Terrain\Standard Assets\Environment\Water\Water\Scripts\MeshContainer.cs" />
+     <Compile Include="Assets\Terrain\Standard Assets\Environment\Water (Basic)\Scripts\WaterBasic.cs" />
+     <Compile Include="Assets\Terrain\Standard Assets\Environment\Water\Water\Scripts\SpecularLighting.cs" />
+     <Compile Include="Assets\Terrain\Standard Assets\Environment\Water\Water\Scripts\Water.cs" />
+     <Compile Include="Assets\Terrain\Standard Assets\Environment\Water\Water\Scripts\GerstnerDisplace.cs" />
+     <Compile Include="Assets\Terrain\Standard Assets\Environment\Water\Water\Scripts\WaterTile.cs" />
+     <None Include="Assets\Terrain\ProceduralTerrainPainter\Shaders\Filters.hlsl" />
+     <None Include="Assets\Terrain\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
+     <None Include="Assets\Terrain\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
+     <None Include="Assets\Terrain\ProceduralTerrainPainter\_Demo\Textures\_LICENSE.txt" />
+     <None Include="Assets\Terrain\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
+     <None Include="Assets\Terrain\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
+     <None Include="Assets\Terrain\ProceduralTerrainPainter\Shaders\Noise.hlsl" />
+     <None Include="Assets\Terrain\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
+     <None Include="Assets\Terrain\ProceduralTerrainPainter\Shaders\Modifier.shader" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -581,6 +595,9 @@
     <Reference Include="Unity.Timeline.Editor">
         <HintPath>C:/Users/andre/OneDrive/Desktop/UnityGames/Space-Jump/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.TerrainTools">
+        <HintPath>C:/Users/andre/OneDrive/Desktop/UnityGames/Space-Jump/Library/ScriptAssemblies/Unity.TerrainTools.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
         <HintPath>C:/Users/andre/OneDrive/Desktop/UnityGames/Space-Jump/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
@@ -602,21 +619,14 @@
     <Reference Include="Unity.TextMeshPro">
         <HintPath>C:/Users/andre/OneDrive/Desktop/UnityGames/Space-Jump/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.UI">
-        <HintPath>C:/Users/andre/OneDrive/Desktop/UnityGames/Space-Jump/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TerrainTools">
-        <HintPath>C:/Users/andre/OneDrive/Desktop/UnityGames/Space-Jump/Library/ScriptAssemblies/Unity.TerrainTools.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.TerrainTools.Editor">
         <HintPath>C:/Users/andre/OneDrive/Desktop/UnityGames/Space-Jump/Library/ScriptAssemblies/Unity.TerrainTools.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.UI">
+        <HintPath>C:/Users/andre/OneDrive/Desktop/UnityGames/Space-Jump/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{c8f34146-5f25-9a83-b462-f0af7afafb45}</Project>
-      <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
     <ProjectReference Include="sc.terrain.painter.runtime.csproj">
       <Project>{76612a96-7458-5553-09c0-da5d80fe178b}</Project>
       <Name>sc.terrain.painter.runtime</Name>

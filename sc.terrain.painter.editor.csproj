@@ -36,12 +36,12 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\ProceduralTerrainPainter\Editor\ModifierEditor.cs" />
-     <Compile Include="Assets\ProceduralTerrainPainter\Editor\PropertyDrawers.cs" />
-     <Compile Include="Assets\ProceduralTerrainPainter\Editor\TerrainPainterInspector.cs" />
-     <Compile Include="Assets\ProceduralTerrainPainter\Editor\HeatmapPreview.cs" />
-     <None Include="Assets\ProceduralTerrainPainter\Editor\Heatmap.shader" />
-     <None Include="Assets\ProceduralTerrainPainter\Editor\sc.terrain.painter.editor.asmdef" />
+     <Compile Include="Assets\Terrain\ProceduralTerrainPainter\Editor\ModifierEditor.cs" />
+     <Compile Include="Assets\Terrain\ProceduralTerrainPainter\Editor\PropertyDrawers.cs" />
+     <Compile Include="Assets\Terrain\ProceduralTerrainPainter\Editor\TerrainPainterInspector.cs" />
+     <Compile Include="Assets\Terrain\ProceduralTerrainPainter\Editor\HeatmapPreview.cs" />
+     <None Include="Assets\Terrain\ProceduralTerrainPainter\Editor\Heatmap.shader" />
+     <None Include="Assets\Terrain\ProceduralTerrainPainter\Editor\sc.terrain.painter.editor.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
