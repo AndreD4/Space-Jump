@@ -18,18 +18,29 @@ public class PlayerControl : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-       float xThrow = Input.GetAxis("Horizontal");
-       float yThrow = Input.GetAxis("Vertical");
-      
-      float xOffset = xThrow * Time.deltaTime * xThrowSpeed;
-      float rawXPos = transform.localPosition.x + xOffset;
-      float clampXPos = Mathf.Clamp(rawXPos, -xRange, xRange);
+  {
+    ProcessTranslation();
+    ProcessRotation();
+  }
 
-      float yOffset = yThrow * Time.deltaTime * yThrowSpeed;
-      float rawYPos = transform.localPosition.y + yOffset;
-      float clampYPos = Mathf.Clamp(rawYPos, -yRange, yRange);
-        
-      transform.localPosition = new Vector3 (clampXPos,clampYPos,transform.localPosition.z);
-    }
+  void ProcessRotation()
+  {
+    transform.localRotation = Quaternion.Euler(-30, 30 , 0f);
+  }
+
+  void ProcessTranslation()
+  {
+    float xThrow = Input.GetAxis("Horizontal");
+    float yThrow = Input.GetAxis("Vertical");
+
+    float xOffset = xThrow * Time.deltaTime * xThrowSpeed;
+    float rawXPos = transform.localPosition.x + xOffset;
+    float clampXPos = Mathf.Clamp(rawXPos, -xRange, xRange);
+
+    float yOffset = yThrow * Time.deltaTime * yThrowSpeed;
+    float rawYPos = transform.localPosition.y + yOffset;
+    float clampYPos = Mathf.Clamp(rawYPos, -yRange, yRange);
+
+    transform.localPosition = new Vector3(clampXPos, clampYPos, transform.localPosition.z);
+  }
 }
