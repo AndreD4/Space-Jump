@@ -98,7 +98,11 @@ MonoBehaviour:
   xThrowSpeed: 65
   yThrowSpeed: 65
   xRange: 10
-  yRange: 10
+  yRange: 7
+  positionPitchFactor: -2
+  controlPitchFactor: -15
+  positionYawFactor: 2
+  controlRollFactor: -20
 --- !u!1 &112353598050226223
 GameObject:
   m_ObjectHideFlags: 0
