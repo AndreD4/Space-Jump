@@ -10,13 +10,16 @@ public class PlayerControl : MonoBehaviour
 
     [SerializeField] float xRange = 5f;
     [SerializeField] float yRange = 5f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
+    [SerializeField] float positionPitchFactor = -2f;
+    [SerializeField] float controlPitchFactor = -10f;
+    [SerializeField] float positionYawFactor = 2f;
+    [SerializeField] float controlRollFactor = -20f;
 
-    // Update is called once per frame
+
+
+    float xThrow, yThrow;
+
     void Update()
   {
     ProcessTranslation();
@@ -25,13 +28,21 @@ public class PlayerControl : MonoBehaviour
 
   void ProcessRotation()
   {
-    transform.localRotation = Quaternion.Euler(-30, 30 , 0f);
+        float pitchDueToPosition = transform.localPosition.y * positionPitchFactor;
+        float pitchDueToControlThrow = yThrow * controlPitchFactor;
+        
+        float pitch = pitchDueToPosition + pitchDueToControlThrow;
+        float yaw = transform.localPosition.x * positionYawFactor;
+        float roll = xThrow * controlRollFactor;
+        
+        transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
+
   }
 
   void ProcessTranslation()
   {
-    float xThrow = Input.GetAxis("Horizontal");
-    float yThrow = Input.GetAxis("Vertical");
+    xThrow = Input.GetAxis("Horizontal");
+    yThrow = Input.GetAxis("Vertical");
 
     float xOffset = xThrow * Time.deltaTime * xThrowSpeed;
     float rawXPos = transform.localPosition.x + xOffset;
